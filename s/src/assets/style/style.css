@@ -1,0 +1,625 @@
+body {
+    font-family: 'Heebo', sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    height: 100%;
+    margin: auto;
+    background-color: #f3f6f9;
+}
+
+main {
+    margin-top: 100px;
+}
+
+.aside_all {
+    width: 100%;
+}
+
+.aside {
+    transform: translateX(-300px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    height: 100vh;
+    overflow-y: auto;
+    background: #F3F6F9;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.open {
+    transform: translateX(0);
+}
+
+.deleteBtn {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.managers_info_table {
+    color: #757575;
+}
+
+.managers_info_table table {
+    border-spacing: 0;
+    text-align: left;
+}
+
+.managers_info_table th,
+td {
+    padding: 0.5rem 2.5rem;
+}
+
+.managers_info_table td:has(button) {
+    padding: 0.5rem 2rem;
+}
+
+.managers_info_table tbody tr:hover {
+    background-color: #75757545;
+}
+
+.managers_info_table thead th {
+    border-bottom: 1px solid black;
+}
+
+.managers_info_table tbody td,
+th {
+    border-bottom: 1px solid #e7e5e5;
+}
+
+#createManager {
+    min-height: 500px;
+    height: auto;
+    width: 100%;
+}
+
+.add_manager_modal_div {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.createManager_all {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.login_container {
+    max-width: 1240px;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.signIn {
+    padding: 3rem;
+    border-radius: 5px;
+    background-color: #F3F6F9;
+    width: 380px;
+    height: 460px;
+}
+
+.signIn .signIn_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.signIn .signIn_title h1 {
+    color: #009CFF;
+    font-size: 1.75rem;
+    font-weight: bold;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.signIn .signIn_title h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #191C24;
+}
+
+.signIn form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.signIn form .input_cont {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #757575;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+    position: relative;
+}
+
+.input_cont_label {
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+    transform-origin: left top;
+    transform: translate(0, 24px) scale(1);
+    background-color: white;
+}
+
+.signIn form .input_cont input:focus+label {
+    transform: translate(0, 10px) scale(0.75);
+    color: #333;
+}
+
+.label-high {
+    transform: translate(0, 10px) scale(0.75);
+    color: #333;
+}
+
+.signIn form button {
+    background-color: #009CFF;
+    border-color: #009CFF;
+    border: 1px solid transparent;
+    padding: 1rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+}
+
+#relative {
+    position: relative;
+}
+
+#monthlyExpenseForm {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px
+}
+
+#createManager .title h2 {
+    font-size: 26px;
+    color: #191C24;
+    font-weight: 600;
+    padding: 20px 20px;
+}
+
+#dailyServiceForm {
+    display: flex;
+    gap: 5px;
+    margin-right: 10px;
+}
+
+#dailyServiceTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#dailyServiceForm .crt_manager_inp_cont {
+    min-width: 120px;
+}
+
+#dailyServiceTable .managers_info_table th,
+#dailyServiceTable .managers_info_table td {
+    padding: 0.5rem 1rem;
+}
+
+#lockBtn {
+    background-color: rgb(237, 144, 4);
+}
+
+.deleteAllBtn {
+    background-color: #ff0000;
+    color: aliceblue;
+    padding: 10px 16px;
+    border-radius: 24px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#dailyServiceTable .add_manager_modal_div {
+    display: flex;
+    gap: 10px;
+}
+
+#header {
+    width: 100%;
+    background: #fff;
+}
+
+.header_all {
+    background: #F3F6F9;
+    width: 100%;
+    height: 64px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.borderedIcon {
+    width: 20px;
+    height: 20px;
+    padding: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: 40px;
+    color: #009CFF;
+}
+
+.header_all .user_dropdown {
+    position: relative;
+
+}
+
+.header_all .dropBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+    cursor: pointer;
+}
+
+.header_all .user_dropdown:hover {
+    color: #009CFF;
+}
+
+.header_all .user_dropdown:hover h2 {
+    color: #009CFF;
+}
+
+.header_all .user_dropdown h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #191C24;
+    transition: .3s;
+}
+
+.header_all .user_dropdown svg:nth-child(3) {
+    transition: .3s;
+}
+
+.dropdown_content {
+    background: #F3F6F9;
+    width: -webkit-fill-available;
+    position: absolute;
+    z-index: 11;
+    top: 105%;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+}
+
+.header_all .dropdown_content ul li a,
+.header_all .dropdown_content ul li button {
+    width: 100%;
+    display: block;
+    font-size: 1.15rem;
+    color: #212529;
+    text-align: left;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.25rem 1rem;
+}
+
+.header_all .dropdown_content ul li a:hover,
+.header_all .dropdown_content ul li button:hover {
+    background: #dedfe1;
+}
+
+.button_container {
+    position: relative;
+    width: 47px;
+    height: 47px;
+}
+
+.bar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.bar::before,
+.bar::after {
+    content: "";
+    position: absolute;
+    width: 29px;
+    height: 4px;
+    background-color: #009CFF;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.bar::before {
+    top: 18px;
+    left: 9px;
+}
+
+.bar::after {
+    top: 28px;
+    left: 9px;
+}
+
+#bar-button {
+    display: none;
+}
+
+#bar-button:checked+.bar {
+    background-color: #009CFF;
+}
+
+#bar-button:checked+.bar::before {
+    transform: rotate(45deg) translate(3px, 3px);
+    background-color: #fff;
+}
+
+#bar-button:checked+.bar::after {
+    transform: rotate(-45deg) translate(4px, -4px);
+    background-color: #fff;
+}
+
+#bar-button:checked~.aside_all {
+    width: 300px;
+}
+
+.aside_all h1 {
+    margin-top: 30px;
+    color: #009CFF;
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid #009CFF;
+    padding-bottom: 30px;
+}
+
+.aside_all .user_info {
+    text-align: center;
+    margin: 27px;
+}
+
+.aside_all .user_info h2 {
+    font-weight: 700;
+    line-height: 1.2;
+    color: #191C24;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.aside_all .user_info span {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #757575;
+}
+
+.aside_all nav .navUl li a {
+    padding: 7px 20px;
+    color: #191C24;
+    font-weight: 500;
+    border-left: 5px solid #F3F6F9;
+    border-radius: 0 30px 30px 0;
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    max-width: 250px;
+    transition: .1s;
+}
+
+.aside_all nav .navUl li a:active {
+    background: #FFFFFF;
+    border-left-color: #009CFF;
+    color: #009CFF;
+}
+
+.aside_all nav .navUl li a:active svg {
+    background: #F3F6F9;
+}
+
+.aside_all nav .navUl li a:hover {
+    background: #FFFFFF;
+    border-left-color: #009CFF;
+    color: #009CFF;
+}
+
+.aside_all nav .navUl li a:hover svg {
+    background: #F3F6F9;
+
+}
+
+.aside_all nav .navUl li a span {
+    font-size: 20px;
+}
+
+.aside_all nav .navUl li a svg {
+    width: 20px;
+    height: 20px;
+    padding: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: 40px;
+}
+
+#closeBtn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: red;
+    padding: 5px 11px;
+    color: #fff;
+    border-radius: 50%;
+    visibility: hidden;
+}
+
+.openEditModal {
+    font-size: 16px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+    background-color: rgb(76 208 73);
+}
+
+.input_time_cont {
+    display: flex;
+    gap: 5px;
+}
+
+.create_daily_service_container {
+    display: flex;
+    gap: 10px;
+}
+
+.create_daily_service_left,
+.create_daily_service_right {
+    width: 48%;
+}
+
+.openModal {
+    background-color: #009CFF;
+    color: aliceblue;
+    padding: 10px 16px;
+    border-radius: 24px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.create_manager_modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 5px;
+    z-index: 1111;
+    width: auto;
+    min-width: 300px
+}
+
+.create_manager_modal_title {
+    position: relative;
+}
+
+.create_manager_modal_title h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #191C24;
+}
+
+.create_manager_modal_title button {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background-color: red;
+    padding: 5px 11px;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.create_manager_modal_cont {
+    z-index: -1;
+}
+
+.crt_manager_inp_cont {
+    min-width: 280px;
+}
+
+.crt_manager_inp_cont label {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #757575;
+}
+
+.crt_manager_inp_cont input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #757575;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 5px;
+}
+
+.create_manager_modal form button {
+    background-color: #009CFF;
+    color: aliceblue;
+    padding: 7px 21px;
+    border-radius: 11px;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.crt_manager_inp_cont select {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #757575;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.title h2{
+    font-size: 26px;
+    color: #191C24;
+    font-weight: 600;
+    padding: 20px 20px;
+}
